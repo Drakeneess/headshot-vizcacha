@@ -41,7 +41,7 @@ export default function Home() {
           className="transition-transform duration-100 ease-out hover:scale-105"
         >
           <Image
-            src="/Logo.png"
+            src="/logo.png"
             alt="Headshot Vizcacha Logo"
             width={240}
             height={240}
