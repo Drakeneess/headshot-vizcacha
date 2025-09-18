@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+/* ---------- HEADSHOT VIZCACHA — Brand Palette ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neutros */
+  --background: #0a0a0a;   /* Black Coal */
+  --foreground: #f4f4f4;   /* Ash White */
+  --secondary:  #141414;   /* Stage Dark */
+  --surface:    #1b1b1b;   /* Panel */
+  --border:     #2a2a2a;   /* Edge */
+
+  /* Acento principal (LOGO amarillo) */
+  --accent:       #ffd60a; /* Logo Yellow */
+  --accent-dark:  #e6b800; /* Darker Yellow for hover */
+  --accent-soft:  #fff08a; /* Light Yellow for highlights */
+
+  /* Acento secundario (BANNER naranja) */
+  --secondary-accent:      #ff6a00; /* Ember Orange */
+  --secondary-accent-dark: #cc5200; /* Ember 700 */
+  --secondary-accent-soft: #ffb27a; /* Ember 300 */
+
+  /* Alternativo (detalles dorados) */
+  --gold:       #d4a74f;   /* Brassy Gold */
+  --gold-dark:  #a3771c;   /* Brass 700 */
 }
 
 @theme inline {
+  /* Mapear a utilidades Tailwind */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-secondary:  var(--secondary);
+  --color-surface:    var(--surface);
+  --color-border:     var(--border);
+
+  --color-accent:       var(--accent);
+  --color-accent-dark:  var(--accent-dark);
+  --color-accent-soft:  var(--accent-soft);
+
+  --color-secondary-accent:      var(--secondary-accent);
+  --color-secondary-accent-dark: var(--secondary-accent-dark);
+  --color-secondary-accent-soft: var(--secondary-accent-soft);
+
+  --color-gold:       var(--gold);
+  --color-gold-dark:  var(--gold-dark);
+
+  --font-sans: var(--font-teko), sans-serif;
+  --font-display: var(--font-bebas), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Modo claro automático */
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
+    --secondary:  #f6f6f6;
+    --surface:    #fafafa;
+    --border:     #e5e7eb;
+
+    --accent:       #ffd60a;
+    --accent-dark:  #e6b800;
+    --accent-soft:  #fff08a;
+
+    --secondary-accent:      #ff6a00;
+    --secondary-accent-dark: #d45500;
+    --secondary-accent-soft: #ffb27a;
+
+    --gold:      #c2942a;
+    --gold-dark: #7a5b12;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
